@@ -18,6 +18,9 @@ Proyecto final de la Tecnicatura en Desarrollo de Software.
 
 # Validaciones:
 -  La Fecha se cargara como AAAA-MM-DD, la idea es que la cargue el usuario para que pueda registar gastos de dias anteriores. Si el ususario carga mal la fecha largar  un cartel de error y que no deje registarar el gasto hasta que coloque bien la fecha
+- Que la fecha exista (no vale 2026-02-31).
+- Que no sea futura.
+- si aprieta Enter sin escribir nada se use la fecha de hoy.
 - El Monto Tiene que ser un número (no letras ni vacío). De caso contrario largar  un cartel de error y que no deje registarar el gasto hasta que coloque un numero
 - El monto Tiene que ser mayor a 0. De caso contrario largar  un cartel de error y que no deje registarar el gasto hasta que coloque un valor
 - La coma la transformamos automaticamente em punto 
