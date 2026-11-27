@@ -53,3 +53,36 @@ def pedir_monto():
        
 monto_ingresado = pedir_monto()
 print(f"El monto ingresado es de ${monto_ingresado:.2f}")
+
+
+
+def pedir_categoria():
+
+    for numero, nombre in CATEGORIAS.items():
+                print(f"{numero} - {nombre}")
+
+    while True:
+
+
+        texto_cat = input("Seleccione una categoría: ").strip()
+
+        if texto_cat == "":
+            print("Error: La categoría no puede estar vacía")
+            continue
+
+        try:
+            cat = int(texto_cat)
+
+            if cat not in CATEGORIAS:
+                print("Error: La categoría seleccionada no existe")
+                continue
+
+            return CATEGORIAS[cat]
+
+        except ValueError:
+            print("Error: Debe ingresar un número válido.")
+
+
+categoria_ingresada = pedir_categoria()
+
+print(f"La categoría seleccionada es: {categoria_ingresada}")
