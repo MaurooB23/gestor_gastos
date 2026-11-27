@@ -86,3 +86,22 @@ def pedir_categoria():
 categoria_ingresada = pedir_categoria()
 
 print(f"La categoría seleccionada es: {categoria_ingresada}")
+
+
+def pedir_descripcion():
+
+    while True:
+        descrip = input("Ingrese una descripción de su gasto: ").strip()
+
+        if descrip == "":
+            return "Sin Descripcion"
+
+        if len(descrip) > MAX_DESCRIPCION:
+            print(f"La descripción no puede superar los {MAX_DESCRIPCION} caracteres")
+            continue
+
+        return descrip
+
+descripcion_ingresada = pedir_descripcion()
+
+print(f"Descripción: {descripcion_ingresada}")
